@@ -1,7 +1,5 @@
 package Java_mysql_erp.util;
 
-import static org.junit.Assert.*;
-
 import java.sql.Connection;
 
 import org.junit.After;
@@ -11,22 +9,27 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class jdbcUtilTest {
+
+public class JdbcUtilTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
+		System.out.println("setUpBeforeClass()");
 	}
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
+		System.out.println("tearDownAfterClass()");
 	}
 
 	@Before
 	public void setUp() throws Exception {
+		System.out.println("setUp()");
 	}
 
 	@After
 	public void tearDown() throws Exception {
+		System.out.println("tearDown()");
 	}
 
 	@Test
@@ -35,7 +38,6 @@ public class jdbcUtilTest {
 		Connection con = jdbcUtil.getConnection();
 		System.out.println("con : " + con);
 		Assert.assertNotNull(con);
-		
 	}
 
 }
